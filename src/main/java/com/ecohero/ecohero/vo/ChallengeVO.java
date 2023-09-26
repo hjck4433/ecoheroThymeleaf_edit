@@ -7,8 +7,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor // 모든 인스턴스 필드를 매개변수로 받는 생성자
+@NoArgsConstructor // 기본 생성자 생성
 public class ChallengeVO {
     private String chlName;
     private String chlIcon;

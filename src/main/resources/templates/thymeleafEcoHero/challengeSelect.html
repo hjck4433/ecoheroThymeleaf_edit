@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>챌린지 정보</h2>
+<table border="1" style="border-collapse: collapse;">
+  <thead style="background-color: royalblue; color: white;">
+  <tr>
+
+    <th>챌린지 이름</th>
+    <th>챌린지 아이콘</th>
+    <th>챌린지 설명</th>
+    <th>챌린지 시작 날짜</th>
+    <th>챌린지 난이도</th>
+    <th>챌린지 포인트</th>
+
+  </tr>
+  </thead>
+  <tbody>
+<!--  향상된 for 문 처럼 돌린다. -->
+  <tr th:each="ch : ${chlName}">
+    <td th:text="${ch.chlName}"></td>
+    <td th:text="${ch.chlIcon}"></td>
+    <td th:text="${ch.chlDesc}"></td>
+    <td th:text="${ch.date}"></td>
+    <td th:text="${ch.chlLevel}"></td>
+    <td th:text="${ch.chlPoint}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

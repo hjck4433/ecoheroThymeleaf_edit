@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>New Challenge</title>
+</head>
+<body>
+<h1>New Challenge</h1>
+<form th:action="@{/challenge/insert}" th:object="${chlName}" method="post">
+    <div>
+        <label for="chlName">챌린지명:</label>
+        <input type="text" id="chlName" th:field="*{chlName}" />
+    </div>
+    <div>
+        <label for="chlIcon">챌린지 아이콘:</label>
+        <input type="text" id="chlIcon" th:field="*{chlIcon}" />
+    </div>
+    <div>
+        <label for="chlDesc">챌린지 설명:</label>
+        <input type="text" id="chlDesc" th:field="*{chlDesc}" />
+    </div>
+    <div>
+        <label for="date">챌린지 시작 날짜:</label>
+        <input type="date" id="date" th:field="*{date}" />
+    </div>
+    <div>
+        <label for="chlLevel">챌린지 난이도:</label>
+        <input type="text" id="chlLevel" th:field="*{chlLevel}" />
+    </div>
+    <div>
+        <label for="chlPoint">챌린지 포인트:</label>
+        <input type="text" id="chlPoint" th:field="*{chlPoint}" />
+    </div>
+    <div>
+        <button type="submit">저장하기</button>
+    </div>
+</form>
+</body>
+</html>
