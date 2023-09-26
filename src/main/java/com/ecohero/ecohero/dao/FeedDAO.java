@@ -14,47 +14,24 @@ public class FeedDAO {
     PreparedStatement pstmt = null;
     ResultSet rs = null;
 
-    public String getUserAlias(String userId) {
-        String userAlias = "";
-        try{
-            conn = Common.getConnection();
-            String sql = "SELECT USER_ALIAS FROM MEMBERS WHERE USER_ID = ?";
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, userId);
-            rs = pstmt.executeQuery();
-
-            if(rs.next()) {
-                userAlias = rs.getString("USER_ALIAS");
-            }
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-        Common.close(rs);
-        Common.close(pstmt);
-        Common.close(conn);
-
-        return userAlias;
-    }
     public List<FeedVO> feedSelect() {
         List<FeedVO> fvl = new ArrayList<>();
         try{
             conn = Common.getConnection();
-            String sql = "SELECT FEED_NUM, USER_ID, ECO_IMG, CHL_NAME, ECO_TXT, (SELECT COUNT(*) FROM GOOD G WHERE F.FEED_NUM = G.FEED_NUM) GOOD_NUM FROM FEED F";
+            String sql = "SELECT FEED_NUM, M.USER_ALIAS, ECO_IMG, CHL_NAME, ECO_TXT, (SELECT COUNT(*) FROM GOOD G WHERE G.FEED_NUM = F.FEED_NUM) GOOD_NUM FROM FEED F JOIN MEMBERS M USING(USER_ID) ORDER BY FEED_NUM DESC";
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
 
             while(rs.next()) {
                 int feedNum = rs.getInt("FEED_NUM");
-                String userId = rs.getString("USER_ID");
+                String userAlias = rs.getString("USER_ALIAS");
                 String ecoImg = rs.getString("ECO_IMG");
                 String chlName = rs.getString("CHL_NAME");
                 String ecoTxt = rs.getString("ECO_TXT");
                 int goodNum = rs.getInt("GOOD_NUM");
 
 
-                //String userAlias = getUserAlias(userId);
-
-                fvl.add(new FeedVO(feedNum, userId, ecoImg, chlName, ecoTxt, goodNum));
+                fvl.add(new FeedVO(feedNum, userAlias, ecoImg, chlName, ecoTxt, goodNum));
             }
             Common.close(rs);
             Common.close(pstmt);
