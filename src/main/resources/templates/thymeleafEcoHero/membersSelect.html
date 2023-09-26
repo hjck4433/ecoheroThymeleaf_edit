@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http:/www.thymeleaf.org">
+<html lang = "en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h2>회원 정보</h2>
-<table border="1" style="border-collapse: collapse;">
-    <thead style="background-color: royalblue; color: white;">
-    <tr>
-        <th>USER_ID</th>
-        <th>USER_ALIAS</th>
-        <th>USDR_NAME</th>
-        <th>HERO_EMAIL</th>
-        <th>USER_PHONE</th>
-        <th>JOIN_DATE</th>
-        <th>HERO_GRADE</th>
-        <th>USER_POINT</th>
-        <th>DAYS</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="emp : ${employees}">
-        <td th:text="${emp.ID}"></td>
-        <td th:text="${emp.ALISAS}"></td>
-        <td th:text="${emp.NAME}"></td>
-        <td th:text="${emp.EMAIL}"></td>
-        <td th:text="${emp.DATE}"></td>
-        <td th:text="${emp.GRADE}"></td>
-        <td th:text="${emp.POINT}"></td>
-        <td th:text="${emp.DAYS}"></td>
-    </tr>
-    </tbody>
-</table>
+    <h2>회원 정보</h2>
+    <table border="1" style="border-collapse: collapse;">
+        <thead style="background-color: royalblue; color: white;">
+        <tr>
+            <th>USER_ID</th>
+            <th>USER_ALIAS</th>
+            <th>USER_NAME</th>
+            <th>HERO_EMAIL</th>
+            <th>USER_PHONE</th>
+            <th>JOIN_DATE</th>
+            <th>HERO_GRADE</th>
+            <th>USER_POINT</th>
+            <th>DAYS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="members : ${userId}">
+            <td th:text="${members.userId}"></td>
+            <td th:text="${members.userAlias}"></td>
+            <td th:text="${members.userName}"></td>
+            <td th:text="${members.userEmail}"></td>
+            <td th:text="${members.userPhone}"></td>
+            <td th:text="${members.joinDate}"></td>
+            <td th:text="${members.heroGrade}"></td>
+            <td th:text="${members.userPoint}"></td>
+            <td th:text="${members.days}"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
