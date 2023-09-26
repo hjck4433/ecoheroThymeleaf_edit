@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>FeedInsert</title>
+</head>
+<body>
+<h1>새 피드 추가</h1>
+<form th:action="@{/emp/insert}" th:object="${newfeed}" method="post">
+    <div>
+        <label for="userId">유저 아이디:</label>
+        <input type="text" id="userId" th:field="*{userId}" />
+    </div>
+    <div>
+        <label for="ecoImg">이미지:</label>
+        <input type="text" id="ecoImg" th:field="*{ecoImg}" />
+    </div>
+    <div>
+        <label for="chlName">챌린지명:</label>
+        <input type="text" id="chlName" th:field="*{chlName}" />
+    </div>
+    <div>
+        <label for="ecoTxt">내용:</label>
+        <input type="text" id="ecoTxt" th:field="*{ecoTxt}" />
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+
+</body>
+</html>
