@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>New Members</title>
+    <link rel="stylesheet" th:href="@{/css/membersInsert.css}"/>
 </head>
 <body>
-    <h1>New Members</h1>
-    <form th:action="@{/members/insert}" th:object="${userId}" method="post">
-        <div>
-            <label for="userId">User ID : </label>
-            <input type="text" id="userid" th:field="*{userId}"/>
-        </div>
-        <div>
-            <label for="userPw">User Pw : </label>
-            <input type="text" id="userPw" th:field="*{userPw}"/>
-        </div>
-        <div>
-            <label for="userAlias">User Alias : </label>
-            <input type="text" id="userAlias" th:field="*{userAlias}"/>
-        </div>
-        <div>
-            <label for="userName">UserName : </label>
-            <input type="text" id="userName" th:field="*{userName}"/>
-        </div>
-        <div>
-            <label for="userEmail">UserEmail : </label>
-            <input type="text" id="userEmail" th:field="*{userEmail}"/>
-        </div>
-        <div>
-            <label for="userPhone">UserPhone : </label>
-            <input type="text" id="userPhone" th:field="*{userPhone}"/>
-        </div>
-        <div>
-            <Button type="submit">가입하기</Button>
-        </div>
-    </form>
+    <div class="wrap">
+        <h1 class="header">New Members</h1>
+        <form th:action="@{/members/insert}" th:object="${userId}" method="post">
+            <div class="inputbox_css">
+                <label for="userId">ID : </label>
+                <input type="text" id="userId" th:field="*{userId}"/>
+            </div>
+            <div class="inputbox_css">
+                <label for="userPw">Pw : </label>
+                <input type="password" id="userPw" th:field="*{userPw}"/>
+            </div>
+            <div class="inputbox_css">
+                <label for="userAlias">Alias : </label>
+                <input type="text" id="userAlias" th:field="*{userAlias}"/>
+            </div>
+            <div class="inputbox_css">
+                <label for="userName">Name : </label>
+                <input type="text" id="userName" th:field="*{userName}"/>
+            </div>
+            <div class="inputbox_css">
+                <label for="userEmail">Email : </label>
+                <input type="text" id="userEmail" th:field="*{userEmail}"/>
+            </div>
+            <div class="inputbox_css">
+                <label for="userPhone">Phone : </label>
+                <input type="text" id="userPhone" th:field="*{userPhone}"/>
+            </div>
+            <div class="btnbox">
+                <Button type="submit">가입하기</Button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

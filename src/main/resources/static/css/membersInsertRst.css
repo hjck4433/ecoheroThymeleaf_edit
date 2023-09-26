@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+.wrap {
+    width: 500px;
+    height: 640px;
+    margin: 0 auto;
+    background-color: rgba(200, 200, 200, 0.2);
+}
+p {
+    color: green;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 640px;
+    text-align: center;
+}
