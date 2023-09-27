@@ -3,8 +3,6 @@ body {
 }
 .wrap {
     width: 1200px;
-    height: 100vh;
-    padding-bottom: 150px;
     margin: 0 auto;
     background-color: rgba(200, 200, 200, 0.2);
 }
@@ -100,4 +98,10 @@ button {
 .menu-wrap  a:hover {
     background-color: green;
     color: white;
+}
+
+.wrap img {
+    margin-top: 100px;
+    display: block;
+    width: 100%;
 }

@@ -5,7 +5,6 @@ body {
     width: 1200px;
     height: 100vh;
     margin: 0 auto;
-    padding-bottom: 150px;
     background-color: rgba(200, 200, 200, 0.2);
 }
 .header {
@@ -65,7 +64,11 @@ table {
     color: white;
 }
 
-
+.wrap img {
+    margin-top: 100px;
+    display: block;
+    width: 100%;
+}
 
 
 

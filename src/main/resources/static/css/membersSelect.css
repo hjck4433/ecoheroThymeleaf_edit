@@ -5,7 +5,6 @@ body {
     width: 1200px;
     margin: 0 auto;
     height: 100%;
-    padding-bottom: 150px;
     background-color: rgba(200, 200, 200, 0.2);
 }
 .header {
@@ -63,4 +62,10 @@ table {
 .menu-wrap  a:hover {
     background-color: green;
     color: white;
+}
+
+.wrap img {
+    margin-top: 100px;
+    display: block;
+    width: 100%;
 }

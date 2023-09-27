@@ -3,16 +3,12 @@ body {
 }
 .wrap {
     width: 1200px;
-    height: 100vh;
     margin: 0 auto;
     background-color: rgba(200, 200, 200, 0.2);
-    position: relative;
 }
 div.inner_wrap {
     width: 100%;
-    height: 400px;
-    position: absolute;
-    top: 150px;
+    padding-top: 200px;
 }
 p {
     color: green;
@@ -30,4 +26,10 @@ a {
 }
 a:hover {
     color: green;
+}
+
+.wrap img {
+    margin-top: 100px;
+    display: block;
+    width: 100%;
 }

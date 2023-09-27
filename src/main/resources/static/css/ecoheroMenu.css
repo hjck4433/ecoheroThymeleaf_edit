@@ -1,12 +1,12 @@
 body {
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 div.wrap {
     max-width: 1200px;
     margin: 0 auto;
-    height: 100vh;
-    padding-top: 200px;
-    padding-bottom : 150px;
+    padding-top: 120px;
     text-align: center;
     background-color: rgb(200,200,200,0.2);
 }
@@ -50,4 +50,10 @@ p {
 .menu-wrap  a:hover {
     background-color: green;
     color: white;
+}
+
+.wrap img {
+    margin-top: 100px;
+    display: block;
+    width: 100%;
 }
