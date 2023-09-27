@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>회원정보리스트</title>
+    <link rel="stylesheet" th:href="@{/css/membersSelect.css}"/>
+    <link rel="stylesheet" href="../../static/css/membersSelect.css"/>
 </head>
 <body>
-    <h2>회원 정보</h2>
-    <table border="1" style="border-collapse: collapse;">
-        <thead style="background-color: royalblue; color: white;">
-        <tr>
-            <th>USER_ID</th>
-            <th>USER_ALIAS</th>
-            <th>USER_NAME</th>
-            <th>HERO_EMAIL</th>
-            <th>USER_PHONE</th>
-            <th>JOIN_DATE</th>
-            <th>HERO_GRADE</th>
-            <th>USER_POINT</th>
-            <th>DAYS</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="members : ${userId}">
-            <td th:text="${members.userId}"></td>
-            <td th:text="${members.userAlias}"></td>
-            <td th:text="${members.userName}"></td>
-            <td th:text="${members.userEmail}"></td>
-            <td th:text="${members.userPhone}"></td>
-            <td th:text="${members.joinDate}"></td>
-            <td th:text="${members.heroGrade}"></td>
-            <td th:text="${members.userPoint}"></td>
-            <td th:text="${members.days}"></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="wrap">
+        <h1 class="header">회원 정보</h1>
+        <table border="1" style="border-collapse: collapse;">
+            <thead>
+            <tr class="tb_title">
+                <th>USER_ID</th>
+                <th>USER_ALIAS</th>
+                <th>USER_NAME</th>
+                <th>HERO_EMAIL</th>
+                <th>USER_PHONE</th>
+                <th>JOIN_DATE</th>
+                <th>HERO_GRADE</th>
+                <th>USER_POINT</th>
+                <th>DAYS</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="tb_info" th:each="members : ${userId}">
+                <td th:text="${members.userId}"></td>
+                <td th:text="${members.userAlias}"></td>
+                <td th:text="${members.userName}"></td>
+                <td th:text="${members.userEmail}"></td>
+                <td th:text="${members.userPhone}"></td>
+                <td th:text="${members.joinDate}"></td>
+                <td th:text="${members.heroGrade}"></td>
+                <td th:text="${members.userPoint}"></td>
+                <td th:text="${members.days}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

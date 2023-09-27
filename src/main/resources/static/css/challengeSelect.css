@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+.wrap {
+    width: 1200px;
+    height: 640px;
+    margin: 0 auto;
+    background-color: rgba(200, 200, 200, 0.2);
+}
+.header {
+    color: green; 
+    text-align: center; 
+    padding: 70px 0 50px;
+    margin: 0;
+}
+table {
+    margin: 0 auto;
+}
+.tb_title {
+    background-color: green;
+    color: white;
+}
+.tb_title > th {
+    height: 40px;
+    line-height: 30px;
+    padding: 0 16px;
+}
+.tb_info > td {
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
