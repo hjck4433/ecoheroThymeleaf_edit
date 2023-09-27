@@ -21,9 +21,5 @@ public class MembersSelectController {
         model.addAttribute ("userId", mbsvo);
         return "thymeleafEcoHero/membersSelect";
     }
-}
 
-//public String selectEmp(Model model) { // View로 모델을 넘겨주는 객체
-//        EmpDAO dao = new EmpDAO();
-//        List<EmpVO> emps = dao.empSelect();
-//        model.addAttribute("employees", emps);
+}
