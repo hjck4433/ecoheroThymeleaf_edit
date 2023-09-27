@@ -11,25 +11,30 @@
         <h1 class="header">New Feed</h1>
         <form th:action="@{/feed/insert}" th:object="${newfeed}" method="post">
             <div class="inputbox_css">
-                <label for="userId">유저 아이디 : </label>
+                <label for="userId">ID : </label>
                 <input placeholder="아이디를 입력하세요!" type="text" id="userId" th:field="*{userId}" />
             </div>
             <div class="inputbox_css">
-                <label for="ecoImg">이미지 : </label>
+                <label for="ecoImg">Image : </label>
                 <input placeholder="이미지를 입력하세요!" type="text" id="ecoImg" th:field="*{ecoImg}" />
             </div>
             <div class="inputbox_css">
-                <label for="chlName">챌린지명 : </label>
+                <label for="chlName">ChlName : </label>
                 <input placeholder="챌린지명을 입력하세요!" type="text" id="chlName" th:field="*{chlName}" />
             </div>
             <div class="inputbox_css textarea">
-                <label for="ecoTxt">내용 : </label>
+                <label for="ecoTxt">Desc : </label>
                 <input placeholder="내용을 입력하세요!" type="text" id="ecoTxt" th:field="*{ecoTxt}" />
             </div>
             <div class="btnbox">
-                <button type="submit">추가하기</button>
+                <button type="submit">Add !</button>
             </div>
         </form>
+
+        <div class="menu-wrap">
+            <a href="http://localhost:8111/ecohero/menu">MainMenu</a>
+            <a href="http://localhost:8111/feed/select">FeedSelect</a>
+        </div>
     </div>
 </body>
 </html>

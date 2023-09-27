@@ -3,8 +3,9 @@ body {
 }
 .wrap {
     width: 1200px;
-    height: 640px;
     margin: 0 auto;
+    height: 100vh;
+    padding-bottom: 150px;
     background-color: rgba(200, 200, 200, 0.2);
 }
 .header {
@@ -27,9 +28,42 @@ table {
 }
 .tb_info > td {
     padding: 5px;
+    max-width: 400px;
 }
 
+.menu-wrap {
+    margin-top: 60px;
+    text-align: center;
+}
 
+.menu-wrap  a {
+    display: inline-block;
+    padding: 15px 20px;
+    margin-right: 10px;
+
+    border: 2px solid green;
+    border-radius: 40px;
+    box-sizing:border-box;
+
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: green;
+
+    background-color: white;
+
+    transition: linear 0.3s;
+    
+}
+.menu-wrap a:last-child {
+    margin-right: 0;
+}
+
+.menu-wrap  a:hover {
+    background-color: green;
+    color: white;
+}
 
 
 

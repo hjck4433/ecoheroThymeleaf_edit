@@ -3,7 +3,7 @@ body {
 }
 .wrap {
     width: 1200px;
-    height: 640px;
+    height: 100vh;
     margin: 0 auto;
     background-color: rgba(200, 200, 200, 0.2);
     position: relative;
@@ -26,5 +26,8 @@ a {
     padding-top: 40px;
     text-align: center;
     text-decoration: none;
+    color: #333;
+}
+a:hover {
     color: green;
 }

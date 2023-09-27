@@ -2,13 +2,19 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>회원가입 결과</title>
+    <title>Members Result</title>
     <link rel="stylesheet" th:href="@{/css/membersInsertRst.css}"/>
     <link rel="stylesheet" href="../../static/css/membersInsertRst.css"/>
 </head>
 <body>
     <div class="wrap">
-       <p>회원가입 되었습니다.</p>
+        <div class="inner_wrap">
+            <p>
+                회원정보가 추가되었습니다.
+                <br>
+                <a href="http://localhost:8111/members/select">회원정보 목록을 보시려면 클릭해주세요!</a>
+            </p>
+        </div>
     </div>
 </body>
 </html>

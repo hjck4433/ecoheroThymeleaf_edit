@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>New Challenge</title>
+    <title>Challenge Insert</title>
     <link rel="stylesheet" th:href="@{/css/challengeInsert.css}"/>
     <link rel="stylesheet" href="../../static/css/challengeInsert.css"/>
 </head>
@@ -12,32 +12,37 @@
         <form th:action="@{/challenge/insert}" th:object="${chlName}" method="post">
             <div class="inputbox_css">
                 <label for="chlName">Name :</label>
-                <input type="text" id="chlName" th:field="*{chlName}" />
+                <input placeholder="챌린지명을 입력하세요!" type="text" id="chlName" th:field="*{chlName}" />
             </div>
             <div class="inputbox_css">
                 <label for="chlIcon">Icon :</label>
-                <input type="text" id="chlIcon" th:field="*{chlIcon}" />
+                <input placeholder="아이콘을 입력하세요!" type="text" id="chlIcon" th:field="*{chlIcon}" />
             </div>
             <div class="inputbox_css">
                 <label for="chlDesc">Desc :</label>
-                <input type="text" id="chlDesc" th:field="*{chlDesc}" />
+                <input placeholder="설명을 입력하세요!" type="text" id="chlDesc" th:field="*{chlDesc}" />
             </div>
             <div class="inputbox_css date_css">
                 <label for="date">Date :</label>
-                <input type="date" id="date" th:field="*{date}" />
+                <input placeholder="시작날짜를 입력하세요!" type="date" id="date" th:field="*{date}" />
             </div>
             <div class="inputbox_css">
                 <label for="chlLevel">Level :</label>
-                <input type="text" id="chlLevel" th:field="*{chlLevel}" />
+                <input placeholder="*/**/*** 중에서만 입력 하세요!" type="text" id="chlLevel" th:field="*{chlLevel}" />
             </div>
             <div class="inputbox_css">
                 <label for="chlPoint">Point :</label>
-                <input type="text" id="chlPoint" th:field="*{chlPoint}" />
+                <input placeholder="50/100/150 을 입력 하세요!" type="text" id="chlPoint" th:field="*{chlPoint}" />
             </div>
             <div class="btnbox">
                 <button type="submit">Save !</button>
             </div>
         </form>
+
+        <div class="menu-wrap">
+            <a href="http://localhost:8111/ecohero/menu">MainMenu</a>
+            <a href="http://localhost:8111/challenge/select">ChallengeSelect</a>
+        </div>
     </div>
 </body>
 </html>

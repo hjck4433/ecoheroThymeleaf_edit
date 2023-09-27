@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>New Members</title>
+    <title>Members Insert</title>
     <link rel="stylesheet" th:href="@{/css/membersInsert.css}"/>
     <link rel="stylesheet" href="../../static/css/membersInsert.css"/>
 </head>
@@ -12,32 +12,37 @@
         <form th:action="@{/members/insert}" th:object="${userId}" method="post">
             <div class="inputbox_css">
                 <label for="userId">ID : </label>
-                <input type="text" id="userId" th:field="*{userId}"/>
+                <input placeholder="아이디를 입력하세요!" type="text" id="userId" th:field="*{userId}"/>
             </div>
             <div class="inputbox_css">
                 <label for="userPw">Pw : </label>
-                <input type="password" id="userPw" th:field="*{userPw}"/>
+                <input placeholder="비밀번호를 입력하세요!" type="password" id="userPw" th:field="*{userPw}"/>
             </div>
             <div class="inputbox_css">
                 <label for="userAlias">Alias : </label>
-                <input type="text" id="userAlias" th:field="*{userAlias}"/>
+                <input placeholder="닉네임을 입력하세요!" type="text" id="userAlias" th:field="*{userAlias}"/>
             </div>
             <div class="inputbox_css">
                 <label for="userName">Name : </label>
-                <input type="text" id="userName" th:field="*{userName}"/>
+                <input placeholder="이름을 입력하세요!" type="text" id="userName" th:field="*{userName}"/>
             </div>
             <div class="inputbox_css">
                 <label for="userEmail">Email : </label>
-                <input type="text" id="userEmail" th:field="*{userEmail}"/>
+                <input placeholder="이메일을 입력하세요!" type="text" id="userEmail" th:field="*{userEmail}"/>
             </div>
             <div class="inputbox_css">
                 <label for="userPhone">Phone : </label>
-                <input type="text" id="userPhone" th:field="*{userPhone}"/>
+                <input placeholder="핸드폰번호를 입력하세요!" type="text" id="userPhone" th:field="*{userPhone}"/>
             </div>
             <div class="btnbox">
                 <Button type="submit">Join !</Button>
             </div>
         </form>
+
+        <div class="menu-wrap">
+            <a href="http://localhost:8111/ecohero/menu">MainMenu</a>
+            <a href="http://localhost:8111/members/select">MembersSelect</a>
+        </div>
     </div>
 </body>
 </html>
