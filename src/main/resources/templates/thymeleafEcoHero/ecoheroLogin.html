@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/membersInsert.css}"/>
+    <link rel="stylesheet" href="../../static/css/membersInsert.css"/>
+</head>
+<body>
+    <div class="wrap">
+        <h1 class = "header">로그인 또는 회원가입을 해 주세요</h1>
+        <form th:action="@{/ecohero/login}" th:object="${userLogin}" method="post">
+            <div class="inputbox_css">
+                <label for="userId">ID : </label>
+                <input placeholder="아이디를 입력하세요!" type="text" id="userId" th:field="*{userId}"/>
+            </div>
+            <div class="inputbox_css">
+                <label for="userPw">Pw : </label>
+                <input placeholder="비밀번호를 입력하세요!" type="password" id="userPw" th:field="*{userPw}"/>
+            </div>
+            <div class="btnbox">
+                <button type="submit">Login !</button>
+            </div>
+        </form>
+
+        <div class="menu-wrap">
+            <a href="http://localhost:8111/members/insert">회원가입</a>
+        </div>
+
+        <img th:src="@{/img/ecoImage.png}" />
+        <!-- <img src="../../static/img/ecoImage.png" alt="에코이미지"> -->
+    </div>
+</body>
+</html>

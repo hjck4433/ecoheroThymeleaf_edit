@@ -34,4 +34,9 @@ public class MembersVO {
         this.userPoint = userPoint;
         this.days = days;
     }
+
+    public MembersVO(String userId, String userPw) {
+        this.userId = userId;
+        this.userPw = userPw;
+    }
 }

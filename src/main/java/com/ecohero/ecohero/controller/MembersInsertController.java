@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/members")
 public class MembersInsertController {
+
     @GetMapping("/insert")
     public String insertViewMembers(Model model) {
         model.addAttribute("userId", new MembersVO());
